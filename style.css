@@ -1,0 +1,132 @@
+body {
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 250px;
+}
+
+.loader-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: rotate 500ms linear 0ms infinite;
+}
+.dot {
+  border: 15px solid rgba(255, 255, 255, 0.789);
+  box-shadow: 0 0 20px rgb(250, 0, 0);
+  border-radius: 30px;
+  animation: change 1s linear 0ms infinite;
+}
+
+.float-y {
+  border: 10px solid red;
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+  position: absolute;
+  border-radius: 20px;
+  animation: osillate-y 1s linear 0ms infinite;
+}
+
+.float-x {
+  border: 10px solid red;
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+  position: absolute;
+  border-radius: 20px;
+  animation: osillate-x 1s linear 0ms infinite;
+}
+.float-y-off {
+  border: 10px solid red;
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+
+  position: absolute;
+  border-radius: 20px;
+  animation: osillate-y-off 1s linear 500ms infinite;
+}
+
+.float-x-off {
+  border: 10px solid red;
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+  position: absolute;
+  border-radius: 20px;
+  animation: osillate-x-off 1s linear 500ms infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes change {
+  0% {
+    box-shadow: 0 0 40px rgb(250, 0, 0);
+  }
+  30% {
+    box-shadow: 0 0 20px rgb(129, 250, 0);
+  }
+
+  60% {
+    box-shadow: 0 0 15px rgb(250, 175, 0);
+  }
+  100% {
+    box-shadow: 0 0 30px rgb(251, 255, 0);
+  }
+}
+
+
+@keyframes osillate-y {
+  0% {
+    transform: translateY(-35px);
+    border: 10px solid red;
+  }
+  50% {
+    transform: translateY(35px);
+  }
+  100% {
+    transform: translateY(-35px);
+    border: 7px solid rgb(204, 255, 0);
+  }
+}
+@keyframes osillate-x {
+  0% {
+    transform: translateX(-35px);
+    border: 10px solid red;
+  }
+  50% {
+    transform: translateX(35px);
+  }
+  100% {
+    transform: translateX(-35px);
+    border: 7px solid rgb(179, 255, 0);
+  }
+}
+@keyframes osillate-y-off {
+  0% {
+    transform: translateY(-35px);
+    border: 10px solid red;
+  }
+  50% {
+    transform: translateY(35px);
+  }
+  100% {
+    transform: translateY(-35px);
+    border: 7px solid rgb(123, 255, 0);
+  }
+}
+@keyframes osillate-x-off {
+  0% {
+    transform: translateX(-35px);
+    border: 10px solid red;
+  }
+  50% {
+    transform: translateX(35px);
+  }
+  100% {
+    transform: translateX(-35px);
+    border: 7px solid rgb(168, 228, 3);
+  }
+}
